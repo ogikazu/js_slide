@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>JS_Slide</title>
+</head>
+<body>
+
+  <!-- スライドの外枠 -->
+  <div class="slide-wrapper">
+    <!-- スライド（コンテンツ） -->
+    <ul id="slide_body" class="slide_body">
+      <li class="slide_item">
+        <p>スライド１</p>
+      </li>
+      <li class="slide_item">
+        <p>スライド２</p>
+      </li>
+      <li class="slide_item">
+        <p>スライド３</p>
+      </li>
+    </ul>
+    <!-- 左右のボタン -->
+    <span id="prev_btn" class="prev_btn"></span>
+    <span id="next_btn" class="next_btn"></span>
+    <!-- インジケーター -->
+    <ul class="indicator-list" id="indicator-list">
+      <li class="indicator-item"></li>
+      <li class="indicator-item"></li>
+      <li class="indicator-item"></li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
