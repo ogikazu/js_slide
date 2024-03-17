@@ -24,10 +24,10 @@ const nextSlide = () => {
 
 // 「戻る」ボタンのハンドラ
 const prevSlide = () => {
-  slide.classList.remove(`slide${count % totalSlides + 1}`);
+  slideBodyElm.classList.remove(`slide${count % totalSlides + 1}`);
   count--;
   if (count < 0) count = totalSlides - 1;
-  slide.classList.add(`slide${count % totalSlides + 1}`);
+  slideBodyElm.classList.add(`slide${count % totalSlides + 1}`);
   updateIndicatorItemBackground();
 }
 
