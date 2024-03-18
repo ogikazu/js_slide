@@ -8,7 +8,7 @@ li {
 }
 
 /* スライドの外枠 */
-.slide-wrapper {
+.slide--wrapper {
   width: 100%;
   height: 300px;
   position: relative;
@@ -16,13 +16,13 @@ li {
 }
 
 /* スライド（コンテンツ） */
-.slide_body {
+.slide--body {
   width: 300%;
   height: 100%;
   display: flex;
   transition: all 0.3s;
 }
-.slide_item {
+.slide--item {
   width: calc(100% / 3);
   height: 100%;
   font-size: 16px;
@@ -32,30 +32,30 @@ li {
   align-items: center;
 }
 
-/* スライド本体に対して JS で付与される slide1~3 に応じて、スライド本体を移動させることでスライドを実現 */
-.slide_body.slide1 {
+/* スライド本体に対して JS で付与される .slide1~3 に応じて、スライド本体を移動させることでスライドを実現 */
+.slide--body.slide1 {
   transform: translateX(0);
 }
-.slide_body.slide2 {
+.slide--body.slide2 {
   transform: translateX( calc(-100% * 1/3) );
 }
-.slide_body.slide3 {
+.slide--body.slide3 {
   transform: translateX( calc(-100% * 2/3) );
 }
 
 /* 分かりやすいように各スライドアイテムに対して背景色を指定 */
-.slide_item:nth-of-type(1) {
+.slide--item:nth-of-type(1) {
   background-color: #E1F3FC;
 }
-.slide_item:nth-of-type(2) {
+.slide--item:nth-of-type(2) {
   background-color: #FCE8F0;
 }
-.slide_item:nth-of-type(3) {
+.slide--item:nth-of-type(3) {
   background-color: #E3F1E4;
 }
 
 /* 左右のボタン */
-.next_btn {
+.slide--next-btn {
   position: absolute;
   width: 15px;
   height: 15px;
@@ -68,7 +68,7 @@ li {
   -webkit-transform: rotate(45deg) translateY(50%);
   transform: rotate(45deg) translateY(50%);
 }
-.prev_btn {
+.slide--prev-btn {
   position:absolute;
   width: 15px;
   height: 15px;
@@ -83,7 +83,7 @@ li {
 }
 
 /* インジケーター */
-.indicator-list {
+.slide--indicator-list {
   width: 100%;
   position: absolute;
   bottom: 20px;
@@ -93,7 +93,7 @@ li {
   justify-content: center;
   align-items: center;
 }
-.indicator-item {
+.slide--indicator-item {
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -102,6 +102,6 @@ li {
   border: solid 2px #000;
   cursor: pointer;
 }
-.indicator-item:first-of-type {
+.slide--indicator-item:first-of-type {
   background-color: #000;
 }

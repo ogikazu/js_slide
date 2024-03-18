@@ -1,8 +1,8 @@
-const slideBodyElm = document.querySelector("#slide_body");
-const prevBtnElm = document.querySelector("#prev_btn");
-const nextBtnElm = document.querySelector("#next_btn");
-const indicatorListElm = document.querySelector("#indicator-list");
-const indicatorItemElmArray = document.querySelectorAll(".indicator-item");
+const slideBodyElm = document.querySelector("#slide--body");
+const prevBtnElm = document.querySelector("#slide--prev-btn");
+const nextBtnElm = document.querySelector("#slide--next-btn");
+const indicatorListElm = document.querySelector("#slide--indicator-list");
+const indicatorItemElmArray = document.querySelectorAll(".slide--indicator-item");
 const totalSlides = indicatorItemElmArray.length;
 let count = 0; // 表示するスライドの位置
 let timerId; // 自動再生で使用するタイマーのIDが入る
@@ -54,7 +54,7 @@ prevBtnElm.addEventListener("click", () => {
 
 // インジケーターがクリックされたら、クリックされた要素を表示する
 indicatorListElm.addEventListener("click", (event) => {
-  if (event.target.classList.contains("indicator-item")) {
+  if (event.target.classList.contains("slide--indicator-item")) {
     const index = Array.from(indicatorItemElmArray).indexOf(event.target);
     slideBodyElm.classList.remove(`slide${count % totalSlides + 1}`);
     count = index;
